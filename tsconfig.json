@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist",
+		"allowJs": true,
+		"target": "ES2015",
+		"noImplicitReturns": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"preserveConstEnums": true,
+		"strict": true
+	},
+	"include": [
+		"./src/**/*"
+	]
+}
