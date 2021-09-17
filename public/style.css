@@ -1,0 +1,15 @@
+#allHamsters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.hamster-item {
+    max-width: 400px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.hamster-item img {
+    width: 100%;
+}

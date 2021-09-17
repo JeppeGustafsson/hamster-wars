@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hamster wars</title>
+</head>
+<body>
+    <form action="/hamsters" method="POST">
+        <input type="text" name="name">
+        <input type="number" name="age">
+        <input type="text" name="favFood">
+        <input type="text" name="loves">
+        <input type="text" name="imgName">
+        <input type="number" name="wins">
+        <input type="number" name="defeats">
+        <input type="number" name="games">
+        <button type="submit">add</button>
+    </form>
+    <div class="results">
+        <div class="hamster" id="winner"></div>
+        <div class="hamster" id="loser"></div>
+    </div>
+    <div id="arena">
+        <div class="hamster-1">
+
+        </div>
+        <div class="hamster-2">
+
+        </div>
+    </div>
+    <div id="allHamsters"></div>
+    <script src="./script.js"></script>
+</body>
+</html>

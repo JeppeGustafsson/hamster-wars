@@ -1,6 +1,13 @@
 import express = require('express');
 const app: express.Application = express();
-const HamsterRoutes = require('../routes/hamsters');
+const Init = require('./init.js');
+const CutestRoute = require('../routes/cutest.js');
+const GetAll = require('../routes/getAll.js'); 
+const GetOne = require('../routes/getOne.js');
+const AddOne = require('../routes/addOne.js');
+const GetRandom = require('../routes/getRandom.js');
+const UpdateOne = require('../routes/updateOne.js');
+const DeleteOne = require('../routes/deleteOne.js');
 const cors = require('cors');
 const port: number = 3000;
 
@@ -8,7 +15,14 @@ const port: number = 3000;
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(HamsterRoutes);
+app.use(Init);
+app.use(CutestRoute);
+app.use(GetAll);
+app.use(GetOne);
+app.use(AddOne);
+app.use(GetRandom);
+app.use(UpdateOne);
+app.use(DeleteOne);
 app.use(express.static('public'));
 
 //Firestore config
