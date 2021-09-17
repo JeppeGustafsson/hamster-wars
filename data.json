@@ -4,7 +4,7 @@
       "age":1,
       "favFood":"ostbollar",
       "loves":"springa i hamsterhjulet",
-      "imgName":"hamster-1.jpg",
+      "imgName":"images/hamster-1.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -14,7 +14,7 @@
       "age":5,
       "favFood":"morot",
       "loves":"springa i hamsterhjulet",
-      "imgName":"hamster-2.jpg",
+      "imgName":"images/hamster-2.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -24,7 +24,7 @@
       "age":2,
       "favFood":"majs",
       "loves":"äta",
-      "imgName":"hamster-3.jpg",
+      "imgName":"images/hamster-3.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -34,7 +34,7 @@
       "age":3,
       "favFood":"rädisor",
       "loves":"sova",
-      "imgName":"hamster-4.jpg",
+      "imgName":"images/hamster-4.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -44,7 +44,7 @@
       "age":1,
       "favFood":"ananas",
       "loves":"Eating",
-      "imgName":"hamster-5.jpg",
+      "imgName":"images/hamster-5.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -54,7 +54,7 @@
       "age":5,
       "favFood":"ananas",
       "loves":"ta tupplurar",
-      "imgName":"hamster-6.jpg",
+      "imgName":"images/hamster-6.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -64,7 +64,7 @@
       "age":4,
       "favFood":"sallad",
       "loves":"sova",
-      "imgName":"hamster-7.jpg",
+      "imgName":"images/hamster-7.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -74,7 +74,7 @@
       "age":6,
       "favFood":"sallad",
       "loves":"springa i hamsterhjulet",
-      "imgName":"hamster-8.jpg",
+      "imgName":"images/hamster-8.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -84,7 +84,7 @@
       "age":5,
       "favFood":"rädisor",
       "loves":"filosofera",
-      "imgName":"hamster-9.jpg",
+      "imgName":"images/hamster-9.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -94,7 +94,7 @@
       "age":5,
       "favFood":"sallad",
       "loves":"ta tupplurar",
-      "imgName":"hamster-10.jpg",
+      "imgName":"images/hamster-10.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -104,7 +104,7 @@
       "age":4,
       "favFood":"ananas",
       "loves":"titta mot horisonten",
-      "imgName":"hamster-11.jpg",
+      "imgName":"images/hamster-11.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -114,7 +114,7 @@
       "age":5,
       "favFood":"äpple",
       "loves":"titta mot horisonten",
-      "imgName":"hamster-12.jpg",
+      "imgName":"images/hamster-12.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -124,7 +124,7 @@
       "age":5,
       "favFood":"cornflakes",
       "loves":"tugga på saker",
-      "imgName":"hamster-13.jpg",
+      "imgName":"images/hamster-13.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -134,7 +134,7 @@
       "age":3,
       "favFood":"gurka",
       "loves":"tugga på saker",
-      "imgName":"hamster-14.jpg",
+      "imgName":"images/hamster-14.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -144,7 +144,7 @@
       "age":4,
       "favFood":"gurka",
       "loves":"springa i hamsterhjulet",
-      "imgName":"hamster-15.jpg",
+      "imgName":"images/hamster-15.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -154,7 +154,7 @@
       "age":4,
       "favFood":"majs",
       "loves":"poppa",
-      "imgName":"hamster-16.jpg",
+      "imgName":"images/hamster-16.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -164,7 +164,7 @@
       "age":6,
       "favFood":"ruccula",
       "loves":"sova",
-      "imgName":"hamster-17.jpg",
+      "imgName":"images/hamster-17.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -174,7 +174,7 @@
       "age":7,
       "favFood":"nötter",
       "loves":"springa i hamsterhjulet",
-      "imgName":"hamster-18.jpg",
+      "imgName":"images/hamster-18.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -184,7 +184,7 @@
       "age":1,
       "favFood":"rädisor",
       "loves":"äta",
-      "imgName":"hamster-19.jpg",
+      "imgName":"images/hamster-19.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -194,7 +194,7 @@
       "age":2,
       "favFood":"sågspån",
       "loves":"sova",
-      "imgName":"hamster-20.jpg",
+      "imgName":"images/hamster-20.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -204,7 +204,7 @@
       "age":1,
       "favFood":"popcorn",
       "loves":"springa i hamsterhjulet",
-      "imgName":"hamster-21.jpg",
+      "imgName":"images/hamster-21.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -214,7 +214,7 @@
       "age":1,
       "favFood":"gräs",
       "loves":"rulla runt",
-      "imgName":"hamster-22.jpg",
+      "imgName":"images/hamster-22.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -224,7 +224,7 @@
       "age":5,
       "favFood":"morot",
       "loves":"rulla runt",
-      "imgName":"hamster-23.jpg",
+      "imgName":"images/hamster-23.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -234,7 +234,7 @@
       "age":4,
       "favFood":"sågspån",
       "loves":"sjunga",
-      "imgName":"hamster-24.jpg",
+      "imgName":"images/hamster-24.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -244,7 +244,7 @@
       "age":5,
       "favFood":"morot",
       "loves":"sjunga",
-      "imgName":"hamster-25.jpg",
+      "imgName":"images/hamster-25.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -254,7 +254,7 @@
       "age":2,
       "favFood":"skorpor",
       "loves":"springa i hamsterhjulet",
-      "imgName":"hamster-26.jpg",
+      "imgName":"images/hamster-26.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -264,7 +264,7 @@
       "age":1,
       "favFood":"gräs",
       "loves":"springa i hamsterhjulet",
-      "imgName":"hamster-27.jpg",
+      "imgName":"images/hamster-27.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -274,7 +274,7 @@
       "age":3,
       "favFood":"sallad",
       "loves":"titta på när andra springer",
-      "imgName":"hamster-28.jpg",
+      "imgName":"images/hamster-28.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -284,7 +284,7 @@
       "age":2,
       "favFood":"persilja",
       "loves":"titta på när andra springer",
-      "imgName":"hamster-29.jpg",
+      "imgName":"images/hamster-29.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -294,7 +294,7 @@
       "age":3,
       "favFood":"rädisor",
       "loves":"filosofera",
-      "imgName":"hamster-30.jpg",
+      "imgName":"images/hamster-30.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -304,7 +304,7 @@
       "age":4,
       "favFood":"cornflakes",
       "loves":"äta",
-      "imgName":"hamster-31.jpg",
+      "imgName":"images/hamster-31.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -314,7 +314,7 @@
       "age":3,
       "favFood":"sallad",
       "loves":"sova",
-      "imgName":"hamster-32.jpg",
+      "imgName":"images/hamster-32.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -324,7 +324,7 @@
       "age":6,
       "favFood":"ruccula",
       "loves":"äta",
-      "imgName":"hamster-33.jpg",
+      "imgName":"images/hamster-33.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -334,7 +334,7 @@
       "age":7,
       "favFood":"ruccula",
       "loves":"sova",
-      "imgName":"hamster-34.jpg",
+      "imgName":"images/hamster-34.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -344,7 +344,7 @@
       "age":5,
       "favFood":"ananas",
       "loves":"bli klappad",
-      "imgName":"hamster-35.jpg",
+      "imgName":"images/hamster-35.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -354,7 +354,7 @@
       "age":3,
       "favFood":"ananas",
       "loves":"bli klappad",
-      "imgName":"hamster-36.jpg",
+      "imgName":"images/hamster-36.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -364,7 +364,7 @@
       "age":1,
       "favFood":"gräs",
       "loves":"bli klappad",
-      "imgName":"hamster-37.jpg",
+      "imgName":"images/hamster-37.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -374,7 +374,7 @@
       "age":2,
       "favFood":"majs",
       "loves":"bli klappad",
-      "imgName":"hamster-38.jpg",
+      "imgName":"images/hamster-38.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -384,7 +384,7 @@
       "age":7,
       "favFood":"sallad",
       "loves":"springa i hamsterhjulet",
-      "imgName":"hamster-39.jpg",
+      "imgName":"images/hamster-39.jpg",
       "wins":0,
       "defeats":0,
       "games":0
@@ -394,7 +394,7 @@
       "age":3,
       "favFood":"morot",
       "loves":"äta",
-      "imgName":"hamster-40.jpg",
+      "imgName":"images/hamster-40.jpg",
       "wins":0,
       "defeats":0,
       "games":0

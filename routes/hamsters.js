@@ -51,12 +51,27 @@ router.get('/hamsters/:id', async (req, res) => {
         return;
     } 
     res.send(hamster);
+});
+
+router.post('/hamsters', async (req, res) => {
+    const hamsterObject = {
+        name: req.body.name,
+        age: req.body.age,
+        favFood: req.body.favFood,
+        loves: req.body.loves,
+        imgName: req.body.imgName,
+        wins: req.body.wins,
+        defeats: req.body.defeats,
+        games: req.body.games
+    };
+    const response = await db.collection('hamsters').add(hamsterObject);
+    res.redirect('/');
+});
+
+
+data.forEach(async i => {
+    await db.collection('hamsters').add(i);
 })
-
-
-// data.forEach(async i => {
-//     await db.collection('hamsters').add(i);
-// })
 
 
 module.exports = router;
