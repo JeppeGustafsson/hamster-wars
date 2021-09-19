@@ -17,7 +17,7 @@ router.post('/hamsters', async (req, res) => {
         games: req.body.games
     };
 
-    if (_.values(hamsterObject).forEach(value => value?.length < 0)) { //Fixa felhanteringen
+    if (_.values(hamsterObject).forEach(value => value?.length <= 0 || value === undefined)) { 
         res.sendStatus(400);
         return;
     } 
