@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('firebase-admin');
-const { toInteger } = require('lodash');
 const _ = require('lodash');
 
 const db = fs.firestore();
@@ -9,21 +8,23 @@ const db = fs.firestore();
 router.get('/hamsters/cutest', async (req, res) => {
     let hamsters = [];
     let results = [];
+
     const request = await db.collection('hamsters').get();
     request.forEach(doc => {
         hamsters.push((doc, '=>', {
-            content: doc.data()
+            content: {...doc.data(), id: doc.ref.id}
         }));
     });
-    
-    hamsters.forEach(hamster => {
-        const result = toInteger(hamster.content.wins) - toInteger(hamster.content.defeats);
-        results.push({...hamster.content, result});
+
+    hamsters.forEach(h => {
+        const count = h.content.wins - h.content.defeats;
+        return results.push({...h, count})
     })
-  
-    const cutest = _.sortBy(results, ['result']).reverse().slice(0,10);
+
+    const maxVal = _.maxBy(results, 'count'); //Få med deuplicates om de existerar och kika varför den inte ses som ett object i test-script
+
     try {
-        res.json(cutest);
+        res.json(maxVal);
     } catch (error) {
         console.log(error);
     }

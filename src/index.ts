@@ -8,6 +8,7 @@ const AddOne = require('../routes/addOne.js');
 const GetRandom = require('../routes/getRandom.js');
 const UpdateOne = require('../routes/updateOne.js');
 const DeleteOne = require('../routes/deleteOne.js');
+const GetMatches = require('../routes/matches.js');
 const cors = require('cors');
 const port: number = 3000;
 
@@ -16,13 +17,14 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(Init);
+app.use(GetRandom);
 app.use(CutestRoute);
 app.use(GetAll);
 app.use(GetOne);
 app.use(AddOne);
-app.use(GetRandom);
 app.use(UpdateOne);
 app.use(DeleteOne);
+app.use(GetMatches);
 app.use(express.static('public'));
 
 //Firestore config

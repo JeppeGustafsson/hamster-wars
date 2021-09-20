@@ -7,12 +7,30 @@ const db = fs.firestore();
 router.put('/hamsters/:id', async (req, res) => {
     //Oklart vad som ska vara här
     const update = {
-        wins: req.body.wins,
-        defeats: req.body.defeats,
-        games: req.body.games
+        wins: req.body.wins || null,
+        defeats: req.body.defeats || null,
+        games: req.body.games || null
     }
+    const id = req.params.id;
+    const dataToUpdate = await db.collection('hamsters').doc(id);
 
-    await db.collection('hamsters').doc(req.params.id).update({wins: update.wins++});
+    dataToUpdate.get()
+        .then(docSnapshot => {
+            if (!docSnapshot.exists) {
+                res.sendStatus(404);
+                return;
+            } else if (false) { //Kolla efter ändring 
+                res.sendStatus(400);
+                return;
+            }
+        })
+
+    await dataToUpdate.update({
+        "defeats": update.defeats, 
+        "wins": update.wins, 
+        "games": update.games
+    });
+    res.json(dataToUpdate);
 });
 
 module.exports = router;
