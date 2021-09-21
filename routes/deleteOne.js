@@ -7,17 +7,15 @@ const db = fs.firestore();
 router.delete('/hamsters/:id', async (req, res) => {
     const id = req.params.id;
     const itemToDelete = db.collection('hamsters').doc(id);
+    const snapshot = await itemToDelete.get().then(doc => doc);
 
-    itemToDelete.get()
-    .then(docSnapshot => {
-        if (!docSnapshot.exists) {
-            res.sendStatus(404);
-            return;
-        }
-    })
+    if (!snapshot.exists) {
+        res.sendStatus(404);
+        return;
+    } 
 
     await itemToDelete.delete();
-    res.json(itemToDelete);
+    res.sendStatus(200);
 });
 
 module.exports = router;

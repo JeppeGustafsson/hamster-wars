@@ -5,14 +5,12 @@ const fs = require('firebase-admin');
 const db = fs.firestore();
 
 
-let hamsters = [];
+const hamsters = [];
 
 router.get('/hamsters', async (req, res) => {
     const request = await db.collection('hamsters').get();
     request.forEach(doc => {
-        hamsters.push((doc, '=>', {
-            content: {...doc.data(), id: doc.ref.id}
-        }));
+        hamsters.push({...doc.data(), id: doc.ref.id});
     });
     try {
         res.json(hamsters);

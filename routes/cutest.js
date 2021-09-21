@@ -11,23 +11,25 @@ router.get('/hamsters/cutest', async (req, res) => {
 
     const request = await db.collection('hamsters').get();
     request.forEach(doc => {
-        hamsters.push((doc, '=>', {
-            content: {...doc.data(), id: doc.ref.id}
-        }));
+        hamsters.push({...doc.data(), id: doc.ref.id})
     });
 
     hamsters.forEach(h => {
-        const count = h.content.wins - h.content.defeats;
+        const count = h.wins - h.defeats;
+    
         return results.push({...h, count})
     })
 
-    const maxVal = _.maxBy(results, 'count'); //Få med deuplicates om de existerar och kika varför den inte ses som ett object i test-script
+    const maxVal = _.maxBy(results, 'count'); 
+    let allCutest = results.filter(i => i.count === maxVal.count);
+    allCutest.filter(i => delete i.count);
 
-    try {
-        res.json(maxVal);
-    } catch (error) {
-        console.log(error);
+    if (allCutest.length === 0) {
+        res.sendStatus(404);
+        return;
     }
+
+    res.json(allCutest);
 });
 
 module.exports = router;

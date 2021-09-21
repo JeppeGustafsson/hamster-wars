@@ -6,13 +6,16 @@ const db = fs.firestore();
 
 router.get('/hamsters/:id', async (req, res) => {
     let hamster;
-    await db.collection('hamsters').doc(req.params.id).get()
-        .then(snapshot => hamster = snapshot.data())
-    
-    if (hamster === undefined) {
+    const id = req.params.id;
+    const itemToGet = db.collection('hamsters').doc(id);
+    const snapshot = await itemToGet.get().then(doc => doc);
+
+    if (!snapshot.exists) {
         res.sendStatus(404);
         return;
     } 
+    
+    hamster = snapshot.data();
     res.send(hamster);
 });
 

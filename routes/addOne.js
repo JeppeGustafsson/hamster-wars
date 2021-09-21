@@ -23,7 +23,6 @@ router.post('/hamsters', async (req, res) => {
     } 
     const response = await db.collection('hamsters').add(hamsterObject);
     res.json({...hamsterObject.content, id: response.id});
-    res.redirect('/');
 });
 
 module.exports = router;
