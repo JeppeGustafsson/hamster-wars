@@ -11,6 +11,8 @@ const GetRandom = require('../routes/getRandom.js');
 const UpdateOne = require('../routes/updateOne.js');
 const DeleteOne = require('../routes/deleteOne.js');
 const GetMatches = require('../routes/matches.js');
+const AddMatch = require('../routes/addMatch.js');
+const GetOneMatch = require('../routes/getOneMatch.js');
 const cors = require('cors');
 const port = 3000;
 //middlewares
@@ -26,6 +28,8 @@ app.use(AddOne);
 app.use(UpdateOne);
 app.use(DeleteOne);
 app.use(GetMatches);
+app.use(AddMatch);
+app.use(GetOneMatch);
 app.use(express.static('public'));
 //Firestore config
 //Endpoints

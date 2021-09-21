@@ -8,16 +8,12 @@ router.get('/hamsters/random', async (req, res) => {
     let hamsters = [];
     const request = await db.collection('hamsters').get();
     request.forEach(doc => {
-        hamsters.push(doc.data());
+        hamsters.push({...doc.data(), id: doc.id});
     });
     const rand = Math.floor(Math.random() * hamsters.length);
     const randomHamster = hamsters[rand];
     
-    try {
-        res.json(randomHamster);
-    } catch (error) {
-        console.log(error);
-    }
+    res.json(randomHamster);
 });
 
 module.exports = router;

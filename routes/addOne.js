@@ -6,6 +6,7 @@ const _ = require('lodash');
 const db = fs.firestore();
 
 router.post('/hamsters', async (req, res) => {
+    const body = req.body;
     const hamsterObject = {
         name: req.body.name,
         age: req.body.age,
@@ -17,10 +18,11 @@ router.post('/hamsters', async (req, res) => {
         games: req.body.games
     };
 
-    if (_.values(hamsterObject).forEach(value => value?.length <= 0 || value === undefined)) { 
+    if (Object.keys(body).length === 0) {
         res.sendStatus(400);
         return;
-    } 
+    }
+
     const response = await db.collection('hamsters').add(hamsterObject);
     res.json({...hamsterObject.content, id: response.id});
 });
