@@ -16,8 +16,7 @@ router.get('/hamsters/cutest', async (req, res) => {
 
     hamsters.forEach(h => {
         const count = h.wins - h.defeats;
-    
-        return results.push({...h, count})
+        return results.push({...h, count: count});
     })
 
     const maxVal = _.maxBy(results, 'count'); 
