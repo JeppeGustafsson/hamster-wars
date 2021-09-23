@@ -11,6 +11,10 @@ const DeleteOne = require('../routes/deleteOne.js');
 const GetMatches = require('../routes/matches.js');
 const AddMatch = require('../routes/addMatch.js');
 const GetOneMatch = require('../routes/getOneMatch.js');
+const GetMatchesForHamster = require('../routes/getMatchWinners.js');
+const TopFiveWinners = require('../routes/topFiveWinners.js');
+const TopFiveLosers = require('../routes/topFiveLosers.js');
+const DeleteOneMatch = require('../routes/deleteOneMatch.js');
 const cors = require('cors');
 const port: number = 3000;
 
@@ -19,23 +23,21 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(Init);
-app.use(CutestRoute);
 app.use(GetRandom);
+app.use(CutestRoute);
+app.use(GetMatchesForHamster);
+app.use(TopFiveWinners);
+app.use(TopFiveLosers);
 app.use(GetAll);
 app.use(GetOne);
 app.use(AddOne);
 app.use(UpdateOne);
 app.use(DeleteOne);
+app.use(DeleteOneMatch);
 app.use(GetMatches);
 app.use(AddMatch);
 app.use(GetOneMatch);
 app.use(express.static('public'));
-
-//Firestore config
-
-
-//Endpoints
-
 
 //Start server
 app.listen(port, (): void => {

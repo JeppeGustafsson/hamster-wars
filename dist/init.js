@@ -6,5 +6,4 @@ const serviceAccount = require("../service-account-credentials.json");
 fs.initializeApp({
     credential: fs.credential.cert(serviceAccount)
 });
-const db = fs.firestore();
 module.exports = router;

@@ -8,8 +8,8 @@ const db = fs.firestore();
 router.post('/matches', async (req, res) => {
     const body = req.body;
     const matchObj = {
-        loserId: 2,
-        winnerId: 1
+        loserId: body.loserId,
+        winnerId: body.winnerId
     }
 
     if (Object.keys(body).length === 0) {

@@ -4,19 +4,18 @@ const fs = require('firebase-admin');
 
 const db = fs.firestore();
 
-router.get('/hamsters/:id', async (req, res) => {
-    let hamster;
+router.delete('/matches/:id', async (req, res) => {
     const id = req.params.id;
-    const itemToGet = db.collection('hamsters').doc(id);
-    const snapshot = await itemToGet.get().then(doc => doc);
+    const itemToDelete = db.collection('matches').doc(id);
+    const snapshot = await itemToDelete.get().then(doc => doc);
 
     if (!snapshot.exists) {
         res.sendStatus(404);
         return;
     } 
-    
-    hamster = snapshot.data();
-    res.status(200).json(hamster);
+
+    await itemToDelete.delete();
+    res.sendStatus(200);
 });
 
 module.exports = router;

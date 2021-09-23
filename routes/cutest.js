@@ -6,10 +6,10 @@ const _ = require('lodash');
 const db = fs.firestore();
 
 router.get('/hamsters/cutest', async (req, res) => {
-    let hamsters = [];
+    const hamsters = [];
     let results = [];
-
     const request = await db.collection('hamsters').get();
+    
     request.forEach(doc => {
         hamsters.push({...doc.data(), id: doc.ref.id})
     });
@@ -20,15 +20,26 @@ router.get('/hamsters/cutest', async (req, res) => {
     })
 
     const maxVal = _.maxBy(results, 'count'); 
-    let allCutest = results.filter(i => i.count === maxVal.count);
-    allCutest.filter(i => delete i.count);
+    let allWinners = results.filter(i => i.count === maxVal.count);
+    allWinners.filter(i => delete i.count);
 
-    if (allCutest.length === 0) {
+    if (request.empty) {
         res.sendStatus(404);
         return;
     }
 
-    res.json(allCutest);
+    // hamsters.sort((a,b) => {
+    //     let aDiff = a.wins - a.defeats;
+    //     let bDiff = b.wins - b.defeats;
+    //     return aDiff - bDiff
+    // });
+
+    // hamsters.reverse();
+
+    // let maxScore = hamsters[0].wins - hamsters[0].defeats;
+    // let allWinners = hamsters.filter(z => z.wins - z.defeats === maxScore);
+
+    res.status(200).json(allWinners);
 });
 
 module.exports = router;

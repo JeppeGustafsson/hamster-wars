@@ -16,7 +16,7 @@ router.get('/matches/:id', async (req, res) => {
     } 
     
     match = snapshot.data();
-    res.send({...match, id: snapshot.id});
+    res.json({...match, id: snapshot.id});
 });
 
 module.exports = router;
