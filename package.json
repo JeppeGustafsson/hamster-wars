@@ -2,7 +2,7 @@
   "name": "hamster-wars",
   "version": "1.0.0",
   "description": "Backend for firestore database to store hamster data",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
     "tsc": "tsc",
