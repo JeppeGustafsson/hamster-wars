@@ -4,6 +4,7 @@
   "description": "Backend for firestore database to store hamster data",
   "main": "dist/index.js",
   "scripts": {
+    "start": "node dist/index.js",
     "tsc": "tsc",
     "upload": "node upload.js"
   },
